@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+    <HorizontalScrollView
+        android:id="@+id/hsv"
+        android:layout_width="@dimen/zeroWidth"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:background="@color/deep_sky_blue"
+        app:layout_constraintBottom_toTopOf="@+id/hsv1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/resultTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:background="@color/deep_sky_blue"
+            android:gravity="end|bottom"
+            android:scrollbars="horizontal"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txtSize"
+            android:padding="@dimen/padding4"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:id="@+id/hsv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:background="@color/deep_sky_blue"
+        app:layout_constraintBottom_toTopOf="@+id/myRecyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hsv" >
+
+        <TextView
+            android:maxLength="16"
+            android:id="@+id/inputTextView"
+            android:background="@color/deep_sky_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding4"
+            android:gravity="end|bottom"
+            android:layout_gravity="end|bottom"
+            android:scrollbars="horizontal"
+            android:text="@string/zero"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt32Size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:id="@+id/hsv2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:background="@color/deep_sky_blue"
+        app:layout_constraintBottom_toTopOf="@+id/myRecyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hsv"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/tempResultTextView"
+            android:background="@color/deep_sky_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end|bottom"
+            android:layout_gravity="end|bottom"
+            android:scrollbars="horizontal"
+            android:padding="@dimen/padding4"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt32Size"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/myRecyclerView"
+        android:layout_width="@dimen/zeroWidth"
+        android:layout_height="@dimen/zeroWidth"
+        android:background="@color/gray"
+        android:scrollbars="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/btn2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hsv1" />
+
+    <android.widget.Button
+        android:id="@+id/btn1"
+        android:layout_width="@dimen/zeroWidth"
+        android:layout_height="@dimen/zeroHeight"
+        android:layout_margin="@dimen/margin8"
+        android:background="@color/white"
+        android:gravity="center"
+        android:padding="@dimen/padding4"
+        android:text="@string/one"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/txtSize"
+        app:layout_constraintBottom_toTopOf="@+id/btn4"
+        app:layout_constraintEnd_toStartOf="@+id/btn2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myRecyclerView" />
+
+    <android.widget.Button
+        android:id="@+id/btn2"
+        android:layout_width="@dimen/zeroWidth"
+        android:layout_height="@dimen/zeroHeight"
+        android:layout_margin="@dimen/margin8"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="@string/two"
+        android:textColor="@color/gray"
+        android:padding="@dimen/padding4"
+        android:textSize="@dimen/txtSize"
+        app:layout_constraintBottom_toTopOf="@+id/btn5"
+        app:layout_constraintEnd_toStartOf="@+id/btn3"
+        app:layout_constraintStart_toEndOf="@+id/btn1"
+        app:layout_constraintTop_toBottomOf="@+id/myRecyclerView" />
+
+    <android.widget.Button
+        android:id="@+id/btn3"
+        android:layout_width="@dimen/zeroWidth"
+        android:layout_height="@dimen/zeroHeight"
+        android:layout_margin="@dimen/margin8"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="@string/three"
+        android:textColor="@color/gray"
+        android:padding="@dimen/padding4"
+        android:textSize="@dimen/txtSize"
+        app:layout_constraintBottom_toTopOf="@+id/btn6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn2"
+        app:layout_constraintTop_toBottomOf="@+id/myRecyclerView" />
+
+    <android.widget.Button
+        android:id="@+id/btn4"
+        android:layout_width="@dimen/zeroWidth"
+        android:layout_height="@dimen/zeroHeight"
+        android:layout_margin="@dimen/margin8"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="@string/four"
+        android:textColor="@color/gray"
+        android:padding="@dimen/padding4"
+        android:textSize="@dimen/txtSize"
+        app:layout_constraintBottom_toTopOf="@+id/btn7"
+        app:layout_constraintEnd_toStartOf="@+id/btn5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn1" />
+
+    <android.widget.Button
+        android:id="@+id/btn5"
+        android:layout_width="@dimen/zeroWidth"
+        android:layout_height="@dimen/zeroHeight"
+        android:layout_margin="@dimen/margin8"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="@string/five"
+        android:textColor="@color/gray"
+        android:padding="@dimen/padding4"
+        android:textSize="@dimen/txtSize"
+        app:layout_constraintBottom_toTopOf="@+id/btn8"
+        app:layout_constraintEnd_toStartOf="@+id/btn6"
+        app:layout_constraintStart_toEndOf="@+id/btn4"
+        app:layout_constraintTop_toBottomOf="@+id/btn2" />
+
+    <android.widget.Button
+        android:id="@+id/btn6"
+        android:layout_width="@dimen/zeroWidth"
+        android:layout_height="@dimen/zeroHeight"
+        android:layout_margin="@dimen/margin8"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="@string/six"
+        android:textColor="@color/gray"
+        android:padding="@dimen/padding4"
+        android:textSize="@dimen/txtSize"
+        app:layout_constraintBottom_toTopOf="@+id/btn9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn5"
+        app:layout_constraintTop_toBottomOf="@+id/btn3" />
+
+    <android.widget.Button
+        android:id="@+id/btn7"
+        android:layout_width="@dimen/zeroWidth"
+        android:layout_height="@dimen/zeroHeight"
+        android:layout_margin="@dimen/margin8"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="@string/seven"
+        android:textColor="@color/gray"
+        android:padding="@dimen/padding4"
+        android:textSize="@dimen/txtSize"
+        app:layout_constraintBottom_toTopOf="@+id/btnPlusMinus"
+        app:layout_constraintEnd_toStartOf="@+id/btn8"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn4" />
+
+    <android.widget.Button
+        android:id="@+id/btn8"
+        android:layout_width="@dimen/zeroWidth"
+        android:layout_height="@dimen/zeroHeight"
+        android:layout_margin="@dimen/margin8"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="@string/eight"
+        android:textColor="@color/gray"
+        android:padding="@dimen/padding4"
+        android:textSize="@dimen/txtSize"
+        app:layout_constraintBottom_toTopOf="@+id/btn0"
+        app:layout_constraintEnd_toStartOf="@+id/btn9"
+        app:layout_constraintStart_toEndOf="@+id/btn7"
+        app:layout_constraintTop_toBottomOf="@+id/btn5" />
+
+    <android.widget.Button
+        android:id="@+id/btn9"
+        android:layout_width="@dimen/zeroWidth"
+        android:layout_height="@dimen/zeroHeight"
+        android:layout_margin="@dimen/margin8"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="@string/nine"
+        android:textColor="@color/gray"
+        android:padding="@dimen/padding4"
+        android:textSize="@dimen/txtSize"
+        app:layout_constraintBottom_toTopOf="@+id/btn_dot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn8"
+        app:layout_constraintTop_toBottomOf="@+id/btn6" />
+
+    <android.widget.Button
+        android:id="@+id/btnPlusMinus"
+        android:layout_width="@dimen/zeroWidth"
+        android:layout_height="@dimen/zeroHeight"
+        android:layout_margin="@dimen/margin8"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="@string/plus_minus"
+        android:textColor="@color/gray"
+        android:padding="@dimen/padding4"
+        android:textSize="@dimen/txtSize"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout1"
+        app:layout_constraintEnd_toStartOf="@+id/btn0"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn7" />
+
+    <android.widget.Button
+        android:id="@+id/btn0"
+        android:layout_width="@dimen/zeroWidth"
+        android:layout_height="@dimen/zeroHeight"
+        android:layout_margin="@dimen/margin8"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="@string/zero"
+        android:textColor="@color/gray"
+        android:padding="@dimen/padding4"
+        android:textSize="@dimen/txtSize"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout2"
+        app:layout_constraintEnd_toStartOf="@+id/btn_dot"
+        app:layout_constraintStart_toEndOf="@+id/btnPlusMinus"
+        app:layout_constraintTop_toBottomOf="@+id/btn8" />
+
+    <android.widget.Button
+        android:id="@+id/btn_dot"
+        android:layout_width="@dimen/zeroWidth"
+        android:layout_height="@dimen/zeroHeight"
+        android:layout_margin="@dimen/margin8"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="@string/dot"
+        android:textColor="@color/gray"
+        android:padding="@dimen/padding4"
+        android:textSize="@dimen/txtSize"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn0"
+        app:layout_constraintTop_toBottomOf="@+id/btn9" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin16"
+        android:layout_marginEnd="@dimen/margin8"
+        android:layout_marginBottom="@dimen/margin16"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btnClear"
+        app:layout_constraintEnd_toStartOf="@+id/frameLayout2"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_pls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin4"
+            android:contentDescription="@string/todo"
+            android:elevation="@dimen/zeroElevation"
+            app:elevation="@dimen/zeroElevation"
+            app:backgroundTint="@color/orchid"
+            app:borderWidth="@dimen/zeroWidth"
+            app:fabSize="normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="7dp"
+            android:gravity="center"
+            android:text="@string/plus"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/txt28Size" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin8"
+        android:layout_marginEnd="@dimen/margin8"
+        android:layout_marginBottom="@dimen/margin16"
+        app:layout_constraintBottom_toTopOf="@+id/btnClear"
+        app:layout_constraintEnd_toStartOf="@+id/frameLayout3"
+        app:layout_constraintStart_toEndOf="@+id/frameLayout1">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin4"
+            android:contentDescription="@string/todo"
+            android:elevation="@dimen/zeroElevation"
+            app:elevation="@dimen/zeroElevation"
+            app:backgroundTint="@color/sandy_brown"
+            app:borderWidth="@dimen/zeroWidth"
+            app:fabSize="normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="7dp"
+            android:gravity="center"
+            android:text="@string/minus"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/txt28Size" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin8"
+        android:layout_marginEnd="@dimen/margin8"
+        android:layout_marginBottom="@dimen/margin16"
+        app:layout_constraintBottom_toTopOf="@+id/btnClear"
+        app:layout_constraintEnd_toStartOf="@id/frameLayout2"
+        app:layout_constraintStart_toEndOf="@id/frameLayout4">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_mul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin4"
+            android:contentDescription="@string/todo"
+            android:elevation="@dimen/zeroElevation"
+            app:elevation="@dimen/zeroElevation"
+            app:backgroundTint="@color/hot_pink"
+            app:borderWidth="@dimen/zeroWidth"
+            app:fabSize="normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:elevation="7dp"
+            android:gravity="center"
+            android:text="@string/multiplication"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/txt24Size" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin8"
+        android:layout_marginEnd="@dimen/margin16"
+        android:layout_marginBottom="@dimen/margin16"
+        app:layout_constraintBottom_toTopOf="@+id/btnClear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/frameLayout3">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_div"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin4"
+            android:contentDescription="@string/todo"
+            android:elevation="@dimen/zeroElevation"
+            app:elevation="@dimen/zeroElevation"
+            app:backgroundTint="@color/sky_blue"
+            app:borderWidth="@dimen/zeroWidth"
+            app:fabSize="normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="7dp"
+            android:gravity="center"
+            android:text="@string/division"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/txt28Size" />
+
+    </FrameLayout>
+
+    <android.widget.Button
+        android:id="@+id/btnClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin8"
+        android:layout_marginEnd="@dimen/margin4"
+        android:layout_marginBottom="@dimen/margin8"
+        android:background="@drawable/my_button"
+        android:padding="@dimen/padding10"
+        android:text="@string/clear"
+        android:textColor="@color/gray"
+        android:textStyle="bold"
+        android:textSize="@dimen/txtSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnClearDigit"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.widget.Button
+        android:id="@+id/btnClearDigit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin4"
+        android:layout_marginEnd="@dimen/margin4"
+        android:layout_marginBottom="@dimen/margin8"
+        android:background="@drawable/my_button"
+        android:padding="@dimen/padding10"
+        android:text="@string/backSpace"
+        android:textColor="@color/gray"
+        android:textStyle="bold"
+        android:textSize="@dimen/txtSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnEqual"
+        app:layout_constraintStart_toEndOf="@+id/btnClear" />
+
+    <android.widget.Button
+        android:id="@+id/btnEqual"
+        android:layout_width="@dimen/zeroWidth"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin4"
+        android:layout_marginEnd="@dimen/margin8"
+        android:layout_marginBottom="@dimen/margin8"
+        android:background="@drawable/my_button"
+        android:padding="@dimen/padding10"
+        android:text="@string/equal"
+        android:textColor="@color/gray"
+        android:textStyle="bold"
+        android:textSize="@dimen/txtSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnClearDigit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

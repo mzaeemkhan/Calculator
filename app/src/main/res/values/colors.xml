@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <integer-array name="rainbow">
+        <item>@color/dark_red</item>
+        <item>@color/dark_salmon</item>
+        <item>@color/dark_green</item>
+        <item>@color/dark_goldenrod</item>
+        <item>@color/fire_brick</item>
+        <item>@color/black</item>
+        <item>@color/dark_olive_green</item>
+        <item>@color/blue</item>
+        <item>@color/violet</item>
+        <item>@color/orange</item>
+        <item>@color/dark_magenta</item>
+    </integer-array>
+
+    <color name="orange">#FFA500</color>
+    <color name="hot_pink">#FF69B4</color>
+    <color name="sandy_brown">#F4A460</color>
+    <color name="violet">#EE82EE</color>
+    <color name="dark_salmon">#E9967A</color>
+    <color name="orchid">#DA70D6</color>
+    <color name="dark_goldenrod">#B8860B</color>
+    <color name="fire_brick">#B22222</color>
+    <color name="dark_magenta">#8B008B</color>
+    <color name="dark_red">#8B0000</color>
+    <color name="sky_blue">#87CEEB</color>
+    <color name="gray">#808080</color>
+    <color name="dark_olive_green">#556B2F</color>
+    <color name="deep_sky_blue">#00BFFF</color>
+    <color name="dark_green">#006400</color>
+    <color name="blue">#0000FF</color>
+</resources>
+
